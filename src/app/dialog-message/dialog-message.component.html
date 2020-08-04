@@ -1,0 +1,7 @@
+<mat-toolbar mat-dialog-title [color]="data.kind" fxLayout="column" fxLayoutAlign="center center">
+  <h1> {{data.title}} </h1>
+</mat-toolbar>
+<div mat-dialog-content fxLayout="column" fxLayoutAlign="center center"> {{data.message}} </div>
+<div mat-dialog-actions fxLayout="column" fxLayoutAlign="center center">
+  <button mat-raised-button [color]="data.kind" mat-dialog-close >Fechar</button>
+</div>

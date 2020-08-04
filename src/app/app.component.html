@@ -1,0 +1,15 @@
+  <mat-drawer-container class="container">
+    <div fxLayout="column" fxLayoutAlign="start stretch" fxFlexFill>
+      <div fxFlex="64px" fxFlex.xs="56px" >
+        <app-header></app-header>
+      </div>
+      <div fxFlex="auto" fxLayoutAlign="center center">
+        <app-container>
+          <router-outlet></router-outlet>
+        </app-container>
+      </div>
+      <div fxFlex="64px" fxFlex.xs="56px" >
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </mat-drawer-container>

@@ -1,0 +1,37 @@
+<div class="calcontainer" fxLayout="column" fxLayoutAlign="center center">
+  <form [formGroup]="calculadoraForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <div>
+        <mat-form-field>
+          <mat-label>Número 1</mat-label>
+          <input name="numero1" formControlName="num1" matInput mask="separator.2" [allowNegativeNumbers]="true" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Número 2</mat-label>
+          <input name="numero2" formControlName="num2" matInput mask="separator.2" [allowNegativeNumbers]="true" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Operação</mat-label>
+          <mat-select formControlName="operacao">
+            <mat-option *ngFor="let op of operacoes" [value]="op.value">
+              {{op.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <button type="submit" mat-raised-button color="primary" [disabled]="!calculadoraForm.valid" >Calcular</button>
+      </div>
+      <div>
+        <mat-form-field >
+          <mat-label>Resultado</mat-label>
+          <input readonly formControlName="resultado" matInput mask="separator.2" [allowNegativeNumbers]="true" >
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</div>

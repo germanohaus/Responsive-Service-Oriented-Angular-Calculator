@@ -1,0 +1,36 @@
+<div class="tabcontainer" fxLayout="column" fxLayoutAlign="center center">
+  <form [formGroup]="tabuadaForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="row" fxLayout.xs="column" fxFill fxLayoutGap="20px">
+      <div fxFlex fxLayoutAlign="center center">
+        <mat-form-field>
+          <mat-label>Número</mat-label>
+          <input name="número" formControlName="num1" matInput mask="separator.2" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div fxFlex fxLayoutAlign="center center">
+       <button type="submit" mat-raised-button color="primary" [disabled]="!tabuadaForm.valid" >Exibir</button>
+      </div>
+    </div>
+
+    <!--- Aqui a tabuada vai ser dividida em duas sessões distintas de modo que serão exibidas uma ao lado da outra em  dispositivos
+       mais largos, num layout estilo row, ou uma abaixo da outra em dispositivo com altura maior que largura (layout.xs) -->
+    <div class="tabuada" fxLayoutGap="0px" fxLayoutGap.gt-xs="20px"fxLayout="row" fxLayout.xs="column" fxFill *ngIf="!hasError">
+      <div fxLayout="column" fxFlex fxLayoutAlign="center center">
+        <span class="no-rep" *ngFor="let number of [0,1,2,3,4]">
+          <!-- Abaixo, usei as funções da própria calculadora para construir a tabuada -->
+          {{fator}} x {{number+1}} = {{resultado[number].toFixed(2)}}
+        </span>
+      </div>
+      <div fxLayout="column" fxFlex fxLayoutAlign="center center">
+        <span class="no-rep" *ngFor="let number of [5,6,7,8,9]">
+          {{fator}} x {{number+1}} = {{resultado[number].toFixed(2)}}
+        </span>
+      </div>
+    </div>
+    <div fxLayoutGap="20px" fxLayout="column" fxFill *ngIf="hasError">
+      <h3>Não consegui calcular a tabuada dessa vez :c</h3>
+      <h3>Tenta escolher um número e daí clicar em exibir! :D</h3>
+    </div>
+  </form>
+
+</div>
