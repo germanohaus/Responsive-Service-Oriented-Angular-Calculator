@@ -4,7 +4,7 @@ Sistema construído para o teste prático da VR Software
 Consiste em uma base com duas abas cada uma com sua respectiva função.
 Todo o código está comentado, explicando o que está sendo feito, ou por que está sendo feito de tal forma.
 
-Para visualizar o projeto no Github Pages, acesse este [link](https://germanohaus.github.io/calc-tabuada/)
+Para visualizar o projeto no Github Pages, acesse este [link](https://germanohaus.github.io/calc-tabuada/) 
 
 # Desenvolvedor
 
