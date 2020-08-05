@@ -1,4 +1,3 @@
-import { DialogMessageComponent } from './dialog-message/dialog-message.component';
 // Imports do Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -15,6 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ContainerComponent } from './container/container.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { TabuadaComponent } from './tabuada/tabuada.component';
+import { DialogMessageComponent } from './dialog-message/dialog-message.component';
+
 
 // Serviços do Germano
 import { CalculadoraService } from './calculadora.service'; // serviço usado para as contas principais como solicitado

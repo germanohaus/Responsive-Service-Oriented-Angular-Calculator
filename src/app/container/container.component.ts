@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+// Aqui o router sendo importado pois mais abaixo vou específicar as propriedades das'abas' do sistema
+
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
@@ -11,6 +13,7 @@ export class ContainerComponent implements OnInit {
   navLinks: any[];
   activeLinkIndex = -1;
 
+  // agora sim, no construtor, os parâmetros das 'abas' sendo colocados no array.
   constructor(private router: Router) {
     this.navLinks = [
       {

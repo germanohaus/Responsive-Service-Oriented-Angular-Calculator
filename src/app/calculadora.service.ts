@@ -8,7 +8,9 @@ import { Injectable } from '@angular/core';
 export class CalculadoraService {
 
   constructor() { }
-
+  // Abaixo faço diversas verificações pra garantir que a função nem inicie sem valores válidos.
+  // Muito disso foi feito pra evitar que o usuário manipule os dados e tente chamar a função normalmente depois de alterar o form
+  // Fiz isso por que é algo que eu tentaria fazer se soubesse que dava pra fazer rs
   calc(num1: number, num2: number, operacao: string): number {
     if (num1 == null ||  num1 === undefined || isNaN(num1)){
       throw new Error('Sem o número 1 eu não consigo operar :/');
@@ -21,7 +23,7 @@ export class CalculadoraService {
     }
     const operacoes = {
       adicao: (a: number, b: number): number => {
-        return parseFloat((a + b).toFixed(2));
+        return parseFloat((a + b).toFixed(2)); // tofixed pra forçar as casas decimais como solicitado na prova
       },
       subtracao: (a: number, b: number): number => {
         return parseFloat((num1 - num2).toFixed(2));

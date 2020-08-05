@@ -23,6 +23,7 @@ export class CalculadoraComponent implements OnInit {
 
   constructor(public calculadora: CalculadoraService, private formBuilder: FormBuilder) { } // Chamando o serviço no construtor padrão
 
+  // fazendo as validações no oninit pra garantir que o componente todo só opere com valoresvalidos.
   ngOnInit(): void {
     this.calculadoraForm = this.formBuilder.group({
       num1: [null, Validators.required],
@@ -32,6 +33,8 @@ export class CalculadoraComponent implements OnInit {
     });
   }
 
+  // Por fim, nosubmit, seta o valor do resultado direto no input que fica dentro do calculadoraForm
+  // seguido de mais conversões pra, como eu falo bastante aqui, garantir a integridade dos valores rs
   onSubmit(): void{
     this.calculadoraForm.controls.resultado.setValue(
       this.calculadora.calc(

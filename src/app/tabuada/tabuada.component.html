@@ -17,7 +17,6 @@
     <div class="tabuada" fxLayoutGap="0px" fxLayoutGap.gt-xs="20px"fxLayout="row" fxLayout.xs="column" fxFill *ngIf="!hasError">
       <div fxLayout="column" fxFlex fxLayoutAlign="center center">
         <span class="no-rep" *ngFor="let number of [0,1,2,3,4]">
-          <!-- Abaixo, usei as funções da própria calculadora para construir a tabuada -->
           {{fator}} x {{number+1}} = {{resultado[number].toFixed(2)}}
         </span>
       </div>
