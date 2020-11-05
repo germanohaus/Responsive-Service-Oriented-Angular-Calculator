@@ -1,8 +1,11 @@
 # Calculadora / Tabuada
 
-Sistema construído para o teste prático da VR Software
+Sistema construído para teste prático de estudos.
 Consiste em uma base com duas abas cada uma com sua respectiva função.
 Todo o código está comentado, explicando o que está sendo feito, ou por que está sendo feito de tal forma.
+Layout Flex/Responsive.
+Sistema orientado a serviços.
+Tratamento de erros personalizado.
 
 Para visualizar o projeto no Github Pages, acesse este [link](https://germanohaus.github.io/Responsive-Service-Oriented-Angular-Calculator/)
 
